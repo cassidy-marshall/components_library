@@ -1,0 +1,383 @@
+body {
+    margin: 0;
+}
+header {
+    width: 100%;
+    text-align: center;
+    letter-spacing: 20px;
+    font-size: 100%;
+    font-family: "Bodoni Moda",serif;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    height: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    justify-content: center;
+    display: flex;
+    color: #6C896C;
+    height: 5rem;
+    background: #D3D3D3
+}
+nav {
+    height: 10rem;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: "Bodoni Moda",serif;
+    width: 75%;
+    justify-content: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem ;
+  }
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+    margin: auto;
+  }
+.dropdown {
+    overflow: hidden;
+    margin: auto;
+  }
+.dropdown .dropbtn {
+    font-size: 16px; 
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #b48b8b;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #b48b8b;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+.dropdown-content a:hover {
+    background-color: #ddd;
+  }
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem ;
+  }
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+.topnav a.split {
+    float: right;
+    color: #f2f2f2;
+  }
+.buttons {
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+}
+.switch {
+  --button-width: 3.5em;
+  --button-height: 2em;
+  --toggle-diameter: 1.5em;
+  --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+  --toggle-shadow-offset: 10px;
+  --toggle-wider: 3em;
+  --color-grey: #cccccc;
+  --color-green: #4296f4;
+  margin-left: 5em;
+margin-right: 5em;
+ }
+ .slider {
+  display: inline-block;
+  width: var(--button-width);
+  height: var(--button-height);
+  background-color: var(--color-grey);
+  border-radius: calc(var(--button-height) / 2);
+  position: relative;
+  transition: 0.3s all ease-in-out;
+ }
+ .slider::after {
+  content: "";
+  display: inline-block;
+  width: var(--toggle-diameter);
+  height: var(--toggle-diameter);
+  background-color: #fff;
+  border-radius: calc(var(--toggle-diameter) / 2);
+  position: absolute;
+  top: var(--button-toggle-offset);
+  transform: translateX(var(--button-toggle-offset));
+  box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+  transition: 0.3s all ease-in-out;
+ }
+ .switch input[type="checkbox"]:checked + .slider {
+  background-color: var(--color-green);
+ }
+ .switch input[type="checkbox"]:checked + .slider::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
+  box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+ }
+ .switch input[type="checkbox"] {
+  display: none;
+ }
+ .switch input[type="checkbox"]:active + .slider::after {
+  width: var(--toggle-wider);
+ }
+ .switch input[type="checkbox"]:checked:active + .slider::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
+ }
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #4f4f4f;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 19px;
+  color: black;
+  z-index: 1;
+  height: 3rem;
+  margin-left: 5em;
+  margin-right: 5em;
+
+ }
+ 
+ .button:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+ }
+ 
+ .button:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #39bda7;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+ }
+ 
+ .button:hover {
+  color: #ffffff;
+  border: 1px solid #39bda7;
+ }
+ 
+ .button:hover:before {
+  top: -35%;
+  background-color: #39bda7;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+ }
+ 
+ .button:hover:after {
+  top: -45%;
+  background-color: #39bda7;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+ }
+.first {
+margin-left: 5em;
+margin-right: 5em;
+font-family:"Bodoni Moda",serif; ;
+display: inline-block;
+padding: 15px 25px;
+font-size: 24px;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+outline: none;
+color: #CEDACE;
+background-color: #698469;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #999;
+}
+.first:hover {background-color: #698484}
+.first:active {
+    background-color: #4a5f70;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.second {
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all .3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  margin-left: 5em;
+  margin-right: 5em;
+  height: 3rem;
+ }
+ 
+ .second:hover {
+  border: 1px solid white;
+ }
+ .second:active {
+  box-shadow: 4px 4px 12px #c5c5c5,
+              -4px -4px 12px #ffffff;
+ }
+.type {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    background-color: #090909;
+}
+.neonText {
+  color: white;
+  text-shadow:
+      0 0 7px white,
+      0 0 10px white,
+      0 0 21px white,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+}
+h3 {
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+margin-left: 3rem;
+margin-right: 3rem;
+margin-top: 1rem;
+font-size: 30px;
+}
+h4 {
+  text-align: center;
+  color: white;
+  font-size:  30px;;
+  transition: 0.5s;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 1rem;
+}
+h5 {
+  font-family: Stencil Std, fantasy;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 1rem;
+  text-align: center;
+  color: white;
+  font-size:  30px;;
+}
+
+h4:hover {
+  text-shadow: 0 .5px 0 #ccc, 0 1px 0 #ccc,
+               0 1.5px 0 #ccc, 0 2px 0 #ccc,
+               0 3px 0 #ccc, 0 3px 0 #ccc,
+               0 3px 0 #ccc, 0 4px 0 #ccc,
+               0 6px 0 #ccc, 0 5px 0 #ccc,
+               0 6px 0 #ccc, 0 6px 0 #ccc,
+               0 10px 15px rgba(0, 0, 0, 0.5);
+}
+.media {
+  display: flex;
+  justify-content: space-around;
+  height: 25em;
+  margin-left: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-width: 1rem;
+}
+.card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 25%;
+      background: #D3D3D3
+}
+.card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+    
+.textbox {
+      padding: 2px 16px;
+}
+.card2 {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 25%;
+      background: #D3D3D3
+}
+.this {
+ margin-bottom: 0;
+}
+.circle {
+  background-image: url("img/media1.jpg");
+  width: 80%;
+  height: 15rem;
+  border-radius: 50%;
+  background-size: cover;
+  margin: auto;
+  background-position: center;
+}
+.card2:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+    
+.textbox2 {
+      padding: 2px 16px;
+}
+footer {
+    height: 5rem;
+    background-color:#f4f2ef;
+    margin-top: 0rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Bodoni Moda",serif;
+    color: #2c4152;
+}
